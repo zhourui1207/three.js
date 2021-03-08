@@ -27,4 +27,6 @@ class TextureNode extends InputNode {
 
 }
 
+TextureNode.prototype.isTextureNode = true;
+
 export default TextureNode;

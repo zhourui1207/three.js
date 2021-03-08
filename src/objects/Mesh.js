@@ -368,7 +368,7 @@ function checkBufferGeometryIntersection( object, material, raycaster, ray, posi
 
 	}
 
-	if ( object.isSkinnedMesh ) {
+	if ( object.isSkinnedMesh && material.skinning ) {
 
 		object.boneTransform( a, _vA );
 		object.boneTransform( b, _vB );
@@ -402,7 +402,7 @@ function checkBufferGeometryIntersection( object, material, raycaster, ray, posi
 
 		const face = {
 			a: a,
-			b: a,
+			b: b,
 			c: c,
 			normal: new Vector3(),
 			materialIndex: 0
